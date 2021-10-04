@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>92906f06-1335-4a05-a7f9-8449d74317b1</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Employee">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Employee" collection="false" name="Employee"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Employee" typeRef="Employee"/>
+    </inputData>
+    <decision id="node_1" name="Select preferred skill element">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Determine training budget"/>
+                <input bomType="EmployeePotential" collection="false" name="Determine employee potential"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Determine aspirational skill compatibility"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Select preferred skill element"/>
+                <rule defaultRule="false" href="node_1/Select%20preferred%20skill%20elements%20logic.dmt" kind="DecisionTable" name="Select preferred skill elements logic"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Select preferred skill element" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Determine training budget">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="CompetenceGroup" collection="false" name="Competence group"/>
+                <input bomType="ProficiencyLevel" collection="false" name="Proficiency level"/>
+                <output bomType="java.lang.Double" collection="false" name="Determine training budget"/>
+                <rule defaultRule="false" href="node_2/Training%20budget%20logic.dmt" kind="DecisionTable" name="Training budget logic"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Determine training budget" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_3" name="Competence group">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="CompetenceGroup" collection="false" name="Competence group"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Competence group" typeRef="CompetenceGroup"/>
+    </inputData>
+    <inputData id="node_4" name="Proficiency level">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ProficiencyLevel" collection="false" name="Proficiency level"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Proficiency level" typeRef="ProficiencyLevel"/>
+    </inputData>
+    <decision id="node_5" name="Determine employee potential">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Employee" collection="false" name="Employee"/>
+                <output bomType="EmployeePotential" collection="false" name="Determine employee potential"/>
+                <rule defaultRule="false" href="node_5/Determine%20employee%20potential%20logic%202.dmt" kind="DecisionTable" name="Determine employee potential logic 2"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_5_ii" name="Determine employee potential" typeRef="EmployeePotential"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_6" name="Determine aspirational skill compatibility">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Skill" collection="false" name="Skill"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Determine aspirational skill compatibility"/>
+                <rule defaultRule="false" href="node_6/Preferred%20aspirational%20skill%20compatibility.dmt" kind="DecisionTable" name="Preferred aspirational skill compatibility"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Determine aspirational skill compatibility" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_7" name="Skill">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Skill" collection="false" name="Skill"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Skill" typeRef="Skill"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

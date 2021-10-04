@@ -1,0 +1,72 @@
+
+# CompetenceGroup
+CompetenceGroup#concept.label = Competence group
+CompetenceGroup.managementSkill#instance.documentation = 
+CompetenceGroup.managementSkill#instance.label = Management skill
+CompetenceGroup.operationalSkills#instance.label = Operational skills
+CompetenceGroup.softSkills#instance.label = Soft skills
+
+# Employee
+Employee#concept.label = Employee
+Employee.Employee(EmployeeAmbition,EmployeeAssessment,EmployeePresenceExpectation)#phrase.navigation = a new {Employee} where {0, Employee ambition} {1, Employee assessment} {2, Employee presence expectation}
+Employee.employeeAmbition#phrase.action = set the Employee ambition of {this} to {Employee ambition}
+Employee.employeeAmbition#phrase.clearer = clear the Employee ambition of {this}
+Employee.employeeAmbition#phrase.navigation = {Employee ambition} of {this}
+Employee.employeeAssessment#phrase.action = set the Employee assessment of {this} to {Employee assessment}
+Employee.employeeAssessment#phrase.clearer = clear the Employee assessment of {this}
+Employee.employeeAssessment#phrase.navigation = {Employee assessment} of {this}
+Employee.employeePresenceExpectation#phrase.action = set the Employee presence expectation of {this} to {Employee presence expectation}
+Employee.employeePresenceExpectation#phrase.clearer = clear the Employee presence expectation of {this}
+Employee.employeePresenceExpectation#phrase.navigation = {Employee presence expectation} of {this}
+
+# EmployeeAmbition
+EmployeeAmbition#concept.label = Employee ambition
+EmployeeAmbition.changeCurrentSkill#instance.label = Change current skill
+EmployeeAmbition.persueCurrentSkill#instance.label = Persue current skill
+
+# EmployeeAssessment
+EmployeeAssessment#concept.label = Employee assessment
+EmployeeAssessment.excellent#instance.label = Excellent
+EmployeeAssessment.meetingExpectations#instance.label = meeting expectations
+EmployeeAssessment.notMeetingExpectations#instance.label = not meeting expectations
+
+# EmployeePotential
+EmployeePotential#concept.documentation = Employee potential
+EmployeePotential#concept.label = Employee potential
+EmployeePotential.highPotential#instance.label = High potential
+EmployeePotential.mediumPotential#instance.label = Medium potential
+EmployeePotential.steady#instance.label = Steady
+
+# EmployeePresenceExpectation
+EmployeePresenceExpectation#concept.label = Employee presence expectation
+EmployeePresenceExpectation.$$2Years#instance.label = 1 - 2 years
+EmployeePresenceExpectation.$$5Years#instance.label = 2 - 5 years
+EmployeePresenceExpectation.moreThan5Years#instance.label = more than 5 years
+
+# ProficiencyLevel
+ProficiencyLevel#concept.label = Proficiency level
+ProficiencyLevel.junior#instance.label = Junior
+ProficiencyLevel.medior#instance.label = Medior
+ProficiencyLevel.senior#instance.label = Senior
+
+# Skill
+Skill#concept.label = Skill
+Skill.Skill(SkillCompatibility,SkillDifficulty)#phrase.navigation = a new {Skill} where {0, Skill compatibility} {1, Skill difficulty}
+Skill.skillCompatibility#phrase.action = set the Skill compatibility of {this} to {Skill compatibility}
+Skill.skillCompatibility#phrase.clearer = clear the Skill compatibility of {this}
+Skill.skillCompatibility#phrase.navigation = {Skill compatibility} of {this}
+Skill.skillDifficulty#phrase.action = set the Skill difficulty of {this} to {Skill difficulty}
+Skill.skillDifficulty#phrase.clearer = clear the Skill difficulty of {this}
+Skill.skillDifficulty#phrase.navigation = {Skill difficulty} of {this}
+
+# SkillCompatibility
+SkillCompatibility#concept.label = Skill compatibility
+SkillCompatibility.no#instance.label = No
+SkillCompatibility.partial#instance.label = Partial
+SkillCompatibility.yes#instance.label = Yes
+
+# SkillDifficulty
+SkillDifficulty#concept.label = Skill difficulty
+SkillDifficulty.big#instance.label = Big
+SkillDifficulty.medium#instance.label = Medium
+SkillDifficulty.small#instance.label = Small

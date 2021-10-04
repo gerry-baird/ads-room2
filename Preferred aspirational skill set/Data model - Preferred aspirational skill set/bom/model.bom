@@ -1,0 +1,191 @@
+
+
+public class CompetenceGroup
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Competence group"
+        property "de.generated" "true"
+{
+    domain {static managementSkill, static operationalSkills, static softSkills}
+    public static final readonly CompetenceGroup managementSkill
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Management skill";
+    public static final readonly CompetenceGroup operationalSkills
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Operational skills";
+    public static final readonly CompetenceGroup softSkills
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Soft skills";
+}
+
+public class Employee
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee"
+        property "de.generated" "true"
+{
+    public EmployeeAmbition employeeAmbition
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employee ambition"
+                property update "true";
+    public EmployeeAssessment employeeAssessment
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employee assessment"
+                property update "true";
+    public EmployeePresenceExpectation employeePresenceExpectation
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employee presence expectation"
+                property update "true";
+    public Employee(EmployeeAmbition employeeAmbition, EmployeeAssessment employeeAssessment, EmployeePresenceExpectation employeePresenceExpectation)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Employee()
+                property "dataio.default" "true";
+}
+
+public class EmployeeAmbition
+        extends java.lang.Enum
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee ambition"
+        property "de.generated" "true"
+{
+    domain {static changeCurrentSkill, static persueCurrentSkill}
+    public static final readonly EmployeeAmbition changeCurrentSkill
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Change current skill";
+    public static final readonly EmployeeAmbition persueCurrentSkill
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Persue current skill";
+}
+
+public class EmployeeAssessment
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee assessment"
+        property "de.generated" "true"
+{
+    domain {static excellent, static meetingExpectations, static notMeetingExpectations}
+    public static final readonly EmployeeAssessment excellent
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Excellent";
+    public static final readonly EmployeeAssessment meetingExpectations
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "meeting expectations";
+    public static final readonly EmployeeAssessment notMeetingExpectations
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "not meeting expectations";
+}
+
+public class EmployeePotential
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee potential"
+        property "de.generated" "true"
+{
+    domain {static highPotential, static mediumPotential, static steady}
+    public static final readonly EmployeePotential highPotential
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "High potential";
+    public static final readonly EmployeePotential mediumPotential
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Medium potential";
+    public static final readonly EmployeePotential steady
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Steady";
+}
+
+public class EmployeePresenceExpectation
+        extends java.lang.Enum
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee presence expectation"
+        property "de.generated" "true"
+{
+    domain {static $$2Years, static $$5Years, static moreThan5Years}
+    public static final readonly EmployeePresenceExpectation $$2Years
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "1 - 2 years";
+    public static final readonly EmployeePresenceExpectation $$5Years
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "2 - 5 years";
+    public static final readonly EmployeePresenceExpectation moreThan5Years
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "more than 5 years";
+}
+
+public class ProficiencyLevel
+        extends java.lang.Enum
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Proficiency level"
+        property "de.generated" "true"
+{
+    domain {static junior, static medior, static senior}
+    public static final readonly ProficiencyLevel junior
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Junior";
+    public static final readonly ProficiencyLevel medior
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Medior";
+    public static final readonly ProficiencyLevel senior
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Senior";
+}
+
+public class Skill
+        property "ads.typeId" "10"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Skill"
+        property "de.generated" "true"
+{
+    public SkillCompatibility skillCompatibility
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Skill compatibility"
+                property update "true";
+    public SkillDifficulty skillDifficulty
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Skill difficulty"
+                property update "true";
+    public Skill(SkillCompatibility skillCompatibility, SkillDifficulty skillDifficulty)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Skill()
+                property "dataio.default" "true";
+}
+
+public class SkillCompatibility
+        extends java.lang.Enum
+        property "ads.typeId" "8"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Skill compatibility"
+        property "de.generated" "true"
+{
+    domain {static no, static partial, static yes}
+    public static final readonly SkillCompatibility no
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "No";
+    public static final readonly SkillCompatibility partial
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Partial";
+    public static final readonly SkillCompatibility yes
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Yes";
+}
+
+public class SkillDifficulty
+        extends java.lang.Enum
+        property "ads.typeId" "9"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Skill difficulty"
+        property "de.generated" "true"
+{
+    domain {static big, static medium, static small}
+    public static final readonly SkillDifficulty big
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Big";
+    public static final readonly SkillDifficulty medium
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Medium";
+    public static final readonly SkillDifficulty small
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Small";
+}
+

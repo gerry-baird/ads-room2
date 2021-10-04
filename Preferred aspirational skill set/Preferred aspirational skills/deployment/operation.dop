@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Preferred aspirational skills">
+  <name>Preferred-aspirational-skills</name>
+  <uuid>7352f491-e9f6-4d59-941c-7c1190c8b66c</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#92906f06-1335-4a05-a7f9-8449d74317b1"/>
+  <targetRuleProject href="../../Preferred%20aspirational%20skills#cacd0fc9-1d85-4a48-85e5-1280c76a7b93"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
