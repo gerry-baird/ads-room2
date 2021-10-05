@@ -1,0 +1,15 @@
+{
+  "employee": {
+    "Employee ambition": "Persue current skill",
+    "Employee assessment": "Excellent",
+    "Employee presence expectation": "more than 5 years"
+  },
+  "skill": {
+    "Skill compatibility": "Yes",
+    "Skill difficulty": "Big"
+  },
+  "employeeCapabilty": {
+    "Competence group": "Operational skills",
+    "Employee proficiency": "Junior"
+  }
+}

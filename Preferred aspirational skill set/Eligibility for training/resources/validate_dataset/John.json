@@ -1,15 +1,15 @@
 {
   "employee": {
     "Employee ambition": "Persue current skill",
-    "Employee assessment": "meeting expectations",
-    "Employee presence expectation": "more than 5 years"
+    "Employee assessment": "not meeting expectations",
+    "Employee presence expectation": "2 - 5 years"
   },
   "skill": {
     "Skill compatibility": "Yes",
-    "Skill difficulty": "Medium"
+    "Skill difficulty": "Big"
   },
   "employeeCapabilty": {
     "Competence group": "Management skill",
-    "Employee proficiency": "Senior"
+    "Employee proficiency": "Medior"
   }
 }

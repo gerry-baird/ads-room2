@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set</groupId>
-    <artifactId>preferredAspirationalSkills</artifactId>
+    <artifactId>eligibilityForTraining</artifactId>
     <version>LATEST-SNAPSHOT</version>
     <packaging>decision-library</packaging>
 
@@ -20,7 +20,7 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>Preferred-aspirational-skills</name>
+                            <name>Eligibility-for-training</name>
                         </deployment>
                     </deployments>
                 <packageName>decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set.preferredaspirationalskills</packageName>

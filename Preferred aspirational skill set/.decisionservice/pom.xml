@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set</groupId>
-            <artifactId>preferredAspirationalSkills</artifactId>
+            <artifactId>eligibilityForTraining</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -34,6 +34,7 @@
     </dependencies>
 
     
+
 
 
 <build>
@@ -71,7 +72,7 @@
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set</groupId>
-                                    <artifactId>preferredAspirationalSkills</artifactId>
+                                    <artifactId>eligibilityForTraining</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

@@ -44,7 +44,7 @@
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Persue current skill]]></Param>
+                                <Param><![CDATA[Change current skill]]></Param>
                             </Expression>
                             <Partition DefId="C2">
                                 <Condition>
@@ -61,7 +61,7 @@
                                 </Condition>
                                 <Condition>
                                     <Expression>
-                                        <Param><![CDATA[more than 5 years]]></Param>
+                                        <Param><![CDATA[2 - 5 years]]></Param>
                                     </Expression>
                                     <ActionSet>
                                         <Action DefId="A0">
@@ -73,12 +73,12 @@
                                 </Condition>
                                 <Condition>
                                     <Expression>
-                                        <Param><![CDATA[2-5 years]]></Param>
+                                        <Param><![CDATA[1 - 2 years]]></Param>
                                     </Expression>
                                     <ActionSet>
                                         <Action DefId="A0">
                                             <Expression>
-                                                <Param><![CDATA[High potential]]></Param>
+                                                <Param><![CDATA[Steady]]></Param>
                                             </Expression>
                                         </Action>
                                     </ActionSet>
@@ -87,7 +87,7 @@
                         </Condition>
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Change current skill]]></Param>
+                                <Param><![CDATA[Persue current skill]]></Param>
                             </Expression>
                             <Partition DefId="C2">
                                 <Condition>
@@ -102,47 +102,33 @@
                                         </Action>
                                     </ActionSet>
                                 </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[2 - 5 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Medium potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[1 - 2 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Medium potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
                             </Partition>
                         </Condition>
                     </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Excellent]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Persue current skill]]></Param>
-                            </Expression>
-                            <ActionSet/>
-                        </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Excellent]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Change current skill]]></Param>
-                            </Expression>
-                            <ActionSet/>
-                        </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[meeting expectations]]></Param>
-                    </Expression>
-                    <ActionSet>
-                        <Action DefId="A0">
-                            <Expression>
-                                <Param><![CDATA[Medium potential]]></Param>
-                            </Expression>
-                        </Action>
-                    </ActionSet>
                 </Condition>
                 <Condition>
                     <Expression>
@@ -157,20 +143,97 @@
                     </ActionSet>
                 </Condition>
                 <Condition>
-                    <Expression/>
-                    <ActionSet/>
-                </Condition>
-                <Condition>
-                    <Expression/>
-                    <ActionSet/>
-                </Condition>
-                <Condition>
-                    <Expression/>
-                    <ActionSet/>
-                </Condition>
-                <Condition>
-                    <Expression/>
-                    <ActionSet/>
+                    <Expression>
+                        <Param><![CDATA[meeting expectations]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Change current skill]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[more than 5 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Medium potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[2 - 5 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Medium potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[1 - 2 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Steady]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Persue current skill]]></Param>
+                            </Expression>
+                            <Partition DefId="C2">
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[more than 5 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[High potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[2 - 5 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Medium potential]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                                <Condition>
+                                    <Expression>
+                                        <Param><![CDATA[1 - 2 years]]></Param>
+                                    </Expression>
+                                    <ActionSet>
+                                        <Action DefId="A0">
+                                            <Expression>
+                                                <Param><![CDATA[Steady]]></Param>
+                                            </Expression>
+                                        </Action>
+                                    </ActionSet>
+                                </Condition>
+                            </Partition>
+                        </Condition>
+                    </Partition>
                 </Condition>
                 <Condition>
                     <Expression/>

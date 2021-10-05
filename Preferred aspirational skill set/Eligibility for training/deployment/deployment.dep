@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set:preferredAspirationalSkills" ruleAppVersion="LATEST-SNAPSHOT" packageName="decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set.preferredaspirationalskills" managingXom="true">
-  <name>Preferred-aspirational-skills</name>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set:eligibilityForTraining" ruleAppVersion="LATEST-SNAPSHOT" packageName="decisions.preferred_aspirational_skill_set.preferred_aspirational_skill_set.preferredaspirationalskills" managingXom="true">
+  <name>Eligibility-for-training</name>
   <uuid>9d41e98d-2a25-463f-a08c-69be2645e801</uuid>
   <locales>en_US</locales>
   <operations operationName="operation">

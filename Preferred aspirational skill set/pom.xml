@@ -19,7 +19,7 @@
     </properties>
     <modules>
         <module>Data model - Preferred aspirational skill set</module>
-        <module>Preferred aspirational skills</module>
+        <module>Eligibility for training</module>
         <module>.decisionservice</module>
     </modules>
 
