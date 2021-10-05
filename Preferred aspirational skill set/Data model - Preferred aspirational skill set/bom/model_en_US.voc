@@ -30,6 +30,16 @@ EmployeeAssessment.excellent#instance.label = Excellent
 EmployeeAssessment.meetingExpectations#instance.label = meeting expectations
 EmployeeAssessment.notMeetingExpectations#instance.label = not meeting expectations
 
+# EmployeeCapability
+EmployeeCapability#concept.label = Employee capability
+EmployeeCapability.EmployeeCapability(CompetenceGroup,ProficiencyLevel)#phrase.navigation = a new {Employee capability} where {0, Competence group} {1, Employee proficiency}
+EmployeeCapability.competenceGroup#phrase.action = set the Competence group of {this} to {Competence group}
+EmployeeCapability.competenceGroup#phrase.clearer = clear the Competence group of {this}
+EmployeeCapability.competenceGroup#phrase.navigation = {Competence group} of {this}
+EmployeeCapability.employeeProficiency#phrase.action = set the Employee proficiency of {this} to {Employee proficiency}
+EmployeeCapability.employeeProficiency#phrase.clearer = clear the Employee proficiency of {this}
+EmployeeCapability.employeeProficiency#phrase.navigation = {Employee proficiency} of {this}
+
 # EmployeePotential
 EmployeePotential#concept.documentation = Employee potential
 EmployeePotential#concept.label = Employee potential

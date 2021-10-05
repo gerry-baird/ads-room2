@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
-  <name>Training budget logic</name>
-  <uuid>39ad7dfa-74fc-484c-a13e-bab24a9a7a81</uuid>
+  <name>Determine training budget</name>
+  <uuid>18e00df9-5472-45b8-9ee1-e0f68f770dac</uuid>
   <locale>en_US</locale>
   <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
     <Body>
@@ -13,12 +13,12 @@
             <ConditionDefinitions>
                 <ConditionDefinition Id="C0">
                     <ExpressionDefinition>
-                        <Text><![CDATA['Proficiency level' is <a Proficiency level>]]></Text>
+                        <Text><![CDATA[the Competence group of 'Employee capabilty' is <a Competence group>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
                 <ConditionDefinition Id="C1">
                     <ExpressionDefinition>
-                        <Text><![CDATA['Competence group' is <a Competence group>]]></Text>
+                        <Text><![CDATA[the Employee proficiency of 'Employee capabilty' is <a Proficiency level>]]></Text>
                     </ExpressionDefinition>
                 </ConditionDefinition>
             </ConditionDefinitions>
@@ -34,24 +34,12 @@
             <Partition DefId="C0">
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[Junior]]></Param>
+                        <Param><![CDATA[Management skill]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Soft skills]]></Param>
-                            </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[1000]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Management skill]]></Param>
+                                <Param><![CDATA[Junior]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
@@ -63,38 +51,7 @@
                         </Condition>
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Operational skills]]></Param>
-                            </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[5000]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                    </Partition>
-                </Condition>
-                <Condition>
-                    <Expression>
-                        <Param><![CDATA[Medior]]></Param>
-                    </Expression>
-                    <Partition DefId="C1">
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Soft skills]]></Param>
-                            </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[2000]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Management skill]]></Param>
+                                <Param><![CDATA[Medior]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
@@ -106,7 +63,7 @@
                         </Condition>
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Operational skills]]></Param>
+                                <Param><![CDATA[Senior]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
@@ -120,24 +77,12 @@
                 </Condition>
                 <Condition>
                     <Expression>
-                        <Param><![CDATA[Senior]]></Param>
+                        <Param><![CDATA[Operational skills]]></Param>
                     </Expression>
                     <Partition DefId="C1">
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Soft skills]]></Param>
-                            </Expression>
-                            <ActionSet>
-                                <Action DefId="A0">
-                                    <Expression>
-                                        <Param><![CDATA[2000]]></Param>
-                                    </Expression>
-                                </Action>
-                            </ActionSet>
-                        </Condition>
-                        <Condition>
-                            <Expression>
-                                <Param><![CDATA[Management skill]]></Param>
+                                <Param><![CDATA[Junior]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
@@ -149,12 +94,67 @@
                         </Condition>
                         <Condition>
                             <Expression>
-                                <Param><![CDATA[Operational skills]]></Param>
+                                <Param><![CDATA[Medior]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[5000]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Senior]]></Param>
                             </Expression>
                             <ActionSet>
                                 <Action DefId="A0">
                                     <Expression>
                                         <Param><![CDATA[10000]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Soft skills]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Junior]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[1000]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Medior]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[2000]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Senior]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A0">
+                                    <Expression>
+                                        <Param><![CDATA[2000]]></Param>
                                     </Expression>
                                 </Action>
                             </ActionSet>
@@ -170,8 +170,8 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
-            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Proficiency level]]></Data>
-            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Competence group]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[Competence group]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[Employee proficiency]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Determine training budget]]></Data>
         </ResourceSet>
     </Resources>

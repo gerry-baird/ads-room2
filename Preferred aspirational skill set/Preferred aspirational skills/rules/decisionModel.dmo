@@ -15,17 +15,17 @@
         </extensionElements>
         <variable id="node_0_ii" name="Employee" typeRef="Employee"/>
     </inputData>
-    <decision id="node_1" name="Select preferred skill element">
+    <decision id="node_1" name="Decide eligibility for training">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="java.lang.Double" collection="false" name="Determine training budget"/>
                 <input bomType="EmployeePotential" collection="false" name="Determine employee potential"/>
                 <input bomType="java.lang.Boolean" collection="false" name="Determine aspirational skill compatibility"/>
-                <output bomType="java.lang.Boolean" collection="false" name="Select preferred skill element"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Decide eligibility for training"/>
                 <rule defaultRule="false" href="node_1/Select%20preferred%20skill%20elements%20logic.dmt" kind="DecisionTable" name="Select preferred skill elements logic"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Select preferred skill element" typeRef="java.lang.Boolean"/>
+        <variable id="node_1_ii" name="Decide eligibility for training" typeRef="java.lang.Boolean"/>
         <informationRequirement>
             <requiredInput href="#node_2"/>
         </informationRequirement>
@@ -39,36 +39,16 @@
     <decision id="node_2" name="Determine training budget">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="CompetenceGroup" collection="false" name="Competence group"/>
-                <input bomType="ProficiencyLevel" collection="false" name="Proficiency level"/>
+                <input bomType="EmployeeCapability" collection="false" name="Employee capabilty"/>
                 <output bomType="java.lang.Double" collection="false" name="Determine training budget"/>
-                <rule defaultRule="false" href="node_2/Training%20budget%20logic.dmt" kind="DecisionTable" name="Training budget logic"/>
+                <rule defaultRule="false" href="node_2/Determine%20training%20budget.dmt" kind="DecisionTable" name="Determine training budget"/>
             </ruleset>
         </extensionElements>
         <variable id="node_2_ii" name="Determine training budget" typeRef="java.lang.Double"/>
         <informationRequirement>
-            <requiredInput href="#node_3"/>
-        </informationRequirement>
-        <informationRequirement>
-            <requiredInput href="#node_4"/>
+            <requiredInput href="#node_8"/>
         </informationRequirement>
     </decision>
-    <inputData id="node_3" name="Competence group">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="CompetenceGroup" collection="false" name="Competence group"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_3_ii" name="Competence group" typeRef="CompetenceGroup"/>
-    </inputData>
-    <inputData id="node_4" name="Proficiency level">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="ProficiencyLevel" collection="false" name="Proficiency level"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_4_ii" name="Proficiency level" typeRef="ProficiencyLevel"/>
-    </inputData>
     <decision id="node_5" name="Determine employee potential">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
@@ -102,6 +82,14 @@
             </initialization>
         </extensionElements>
         <variable id="node_7_ii" name="Skill" typeRef="Skill"/>
+    </inputData>
+    <inputData id="node_8" name="Employee capabilty">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="EmployeeCapability" collection="false" name="Employee capabilty"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_8_ii" name="Employee capabilty" typeRef="EmployeeCapability"/>
     </inputData>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>

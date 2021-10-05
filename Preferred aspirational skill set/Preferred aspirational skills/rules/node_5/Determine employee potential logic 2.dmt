@@ -61,7 +61,7 @@
                                 </Condition>
                                 <Condition>
                                     <Expression>
-                                        <Param><![CDATA[2 - 5 years]]></Param>
+                                        <Param><![CDATA[more than 5 years]]></Param>
                                     </Expression>
                                     <ActionSet>
                                         <Action DefId="A0">
@@ -73,7 +73,7 @@
                                 </Condition>
                                 <Condition>
                                     <Expression>
-                                        <Param><![CDATA[more than 5 years]]></Param>
+                                        <Param><![CDATA[2-5 years]]></Param>
                                     </Expression>
                                     <ActionSet>
                                         <Action DefId="A0">
@@ -103,6 +103,32 @@
                                     </ActionSet>
                                 </Condition>
                             </Partition>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Excellent]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Persue current skill]]></Param>
+                            </Expression>
+                            <ActionSet/>
+                        </Condition>
+                    </Partition>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Param><![CDATA[Excellent]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Param><![CDATA[Change current skill]]></Param>
+                            </Expression>
+                            <ActionSet/>
                         </Condition>
                     </Partition>
                 </Condition>

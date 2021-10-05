@@ -77,6 +77,28 @@ public class EmployeeAssessment
                 property "com.fasterxml.jackson.annotation.JsonProperty" "not meeting expectations";
 }
 
+public class EmployeeCapability
+        property "ads.typeId" "11"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Employee capability"
+        property "de.generated" "true"
+{
+    public CompetenceGroup competenceGroup
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Competence group"
+                property update "true";
+    public ProficiencyLevel employeeProficiency
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employee proficiency"
+                property update "true";
+    public EmployeeCapability(CompetenceGroup competenceGroup, ProficiencyLevel employeeProficiency)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public EmployeeCapability()
+                property "dataio.default" "true";
+}
+
 public class EmployeePotential
         extends java.lang.Enum
         property "ads.typeId" "4"

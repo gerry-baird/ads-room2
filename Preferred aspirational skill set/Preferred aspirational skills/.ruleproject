@@ -31,5 +31,5 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <documentation><![CDATA[Preferred aspirational skill set]]></documentation>
+  <documentation><![CDATA[Decide eligibility for training]]></documentation>
 </ilog.rules.studio.model.base:RuleProject>

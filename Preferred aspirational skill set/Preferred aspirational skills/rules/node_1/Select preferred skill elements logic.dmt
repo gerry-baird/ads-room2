@@ -30,7 +30,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a boolean>]]></Text>
+                        <Text><![CDATA[set 'decision' to <a boolean>]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -207,10 +207,10 @@
     </Body>
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Select preferred skill element]]></Data>
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[Determine training budget]]></Data>
             <Data Name="Definitions(C1)#HeaderText"><![CDATA[Determine employee potential]]></Data>
             <Data Name="Definitions(C2)#HeaderText"><![CDATA[Determine aspirational skill compatibility]]></Data>
-            <Data Name="Definitions(A0)#HeaderText"><![CDATA[Select preferred skill element]]></Data>
         </ResourceSet>
     </Resources>
 </DT></definition>
