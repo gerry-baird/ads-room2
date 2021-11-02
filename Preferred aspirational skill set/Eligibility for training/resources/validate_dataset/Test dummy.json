@@ -1,0 +1,15 @@
+{
+  "employee": {
+    "Employee ambition": "Change current skill",
+    "Employee assessment": "meeting expectations",
+    "Employee presence expectation": "more than 5 years"
+  },
+  "skill": {
+    "Skill difficulty": "Medium",
+    "Skill compatibility": "No"
+  },
+  "employeeCapabilty": {
+    "Competence group": "Operational skills",
+    "Employee proficiency": "Medior"
+  }
+}
